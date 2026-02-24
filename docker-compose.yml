@@ -11,7 +11,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    build: ./backend
+    image: aashitiwari14/mean-backend:latest
     container_name: node-backend
     restart: always
     ports:
@@ -22,7 +22,7 @@ services:
       - PORT=8080
 
   frontend:
-    build: ./frontend
+    image: aashitiwari14/mean-frontend:latest
     container_name: angular-frontend
     restart: always
     ports:
